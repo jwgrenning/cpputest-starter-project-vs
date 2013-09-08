@@ -42,7 +42,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../include/util;$(CPPUTEST_HOME)/include;$(CPPUTEST_HOME)/include/Platforms/VisualCpp"
+				AdditionalIncludeDirectories="&quot;$(CPPUTEST_HOME)/include&quot;;&quot;$(CPPUTEST_HOME)/include/Platforms/VisualCpp&quot;;&quot;..\example-include&quot;;..\tests"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -173,7 +173,11 @@
 			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 			>
 			<File
-				RelativePath="..\SomeDirectory\example.c"
+				RelativePath="..\example-src\Example.c"
+				>
+			</File>
+			<File
+				RelativePath="..\example-platform\io.c"
 				>
 			</File>
 		</Filter>
@@ -181,6 +185,18 @@
 			Name="Header Files"
 			Filter="h;hpp;hxx;hm;inl"
 			>
+			<File
+				RelativePath="..\example-include\Example.h"
+				>
+			</File>
+			<File
+				RelativePath="..\example-include\FooExample.h"
+				>
+			</File>
+			<File
+				RelativePath="..\example-include\io.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

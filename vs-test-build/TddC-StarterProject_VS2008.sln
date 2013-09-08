@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual C++ Express 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AllTests", "tests\AllTests.vcproj", "{FFC41D1E-EE73-412C-A3DA-112493A11D75}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AllTests", ".\AllTests.vcproj", "{FFC41D1E-EE73-412C-A3DA-112493A11D75}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B91444F6-1620-4836-8BDE-05A795A7E772} = {B91444F6-1620-4836-8BDE-05A795A7E772}
 	EndProjectSection
 EndProjec
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProductionCodeLib", "ProductionCodeLib\ProductionCodeLib.vcproj", "{B91444F6-1620-4836-8BDE-05A795A7E772}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProductionCodeLib", ".\ProductionCodeLib.vcproj", "{B91444F6-1620-4836-8BDE-05A795A7E772}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

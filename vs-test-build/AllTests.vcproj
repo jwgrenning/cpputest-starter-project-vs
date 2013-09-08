@@ -132,7 +132,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\mocks;..\include\util;..\src;$(CPPUTEST_HOME)/include;$(CPPUTEST_HOME)/include/Platforms/VisualCpp"
+				AdditionalIncludeDirectories="&quot;$(CPPUTEST_HOME)/include&quot;;&quot;$(CPPUTEST_HOME)/include/Platforms/VisualCpp&quot;;&quot;..\example-include&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -158,7 +158,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="$(CPPUTEST_HOME)\lib\vs2008\cpputest.lib ..\lib\ProductionCodeLib.lib odbc32.lib odbccp32.lib winmm.lib $(NOINHERIT)"
+				AdditionalDependencies="$(CPPUTEST_HOME)\lib\cpputest.lib .\Debug\ProductionCodeLib.lib odbc32.lib odbccp32.lib winmm.lib $(NOINHERIT)"
 				OutputFile=".\Debug/AllTests.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -191,7 +191,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="Debug\AllTests -v"
+				CommandLine=""
 			/>
 		</Configuration>
 	</Configurations>
@@ -203,28 +203,15 @@
 			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 			>
 			<File
-				RelativePath="AllTests.cpp"
+				RelativePath="..\tests\AllTests.cpp"
 				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\MyFirstTest.cpp"
+				RelativePath="..\tests\ExampleTest.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\tests\MyFirstTest.cpp"
 				>
 			</File>
 		</Filter>
