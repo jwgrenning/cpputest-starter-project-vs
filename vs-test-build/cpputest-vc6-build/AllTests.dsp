@@ -65,7 +65,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /GZ /c
-# ADD CPP /nologo /MDd /W3 /GX /ZI /Od /I "$(CPPUTEST_HOME)/include" /I "$(CPPUTEST_HOME)/include/Platforms/VisualCpp" /I "..\example-include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FD /GZ /c
+# ADD CPP /nologo /MDd /W3 /GX /ZI /Od /I "..\include" /I "..\include\Platforms\VisualCpp" /D "_CONSOLE" /D "WIN32" /D "_DEBUG" /D "_MBCS" /FR /FD /GZ /c
 # SUBTRACT CPP /YX
 # ADD BASE RSC /l 0x409 /d "_DEBUG"
 # ADD RSC /l 0x409 /d "_DEBUG"
@@ -74,12 +74,8 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 $(CPPUTEST_HOME)\lib\cpputest.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept
+# ADD LINK32 ..\lib\CppUTest.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept
 # SUBTRACT LINK32 /incremental:no
-# Begin Special Build Tool
-SOURCE="$(InputPath)"
-PostBuild_Cmds=Debug\AllTests.exe
-# End Special Build Tool
 
 !ENDIF 
 
@@ -92,28 +88,180 @@ PostBuild_Cmds=Debug\AllTests.exe
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE=..\tests\AllTests.cpp
+SOURCE=.\AllocationInCFile.c
 # End Source File
 # Begin Source File
 
-SOURCE=..\tests\ExampleTest.cpp
+SOURCE=.\AllocationInCppFile.cpp
 # End Source File
 # Begin Source File
 
-SOURCE="..\tests\io-cppumock\io_CppUMock.cpp"
+SOURCE=.\AllTests.cpp
 # End Source File
 # Begin Source File
 
-SOURCE="..\tests\io-cppumock\io_CppUMockTest.cpp"
+SOURCE=.\CheatSheetTest.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=..\tests\MyFirstTest.cpp
+SOURCE=.\CommandLineArgumentsTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CommandLineTestRunnerTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\JUnitOutputTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\MemoryLeakDetectorTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\MemoryLeakOperatorOverloadsTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\MemoryLeakWarningTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\NullTestTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\PluginTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\PreprocessorTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\SetPluginTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\SimpleStringTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestCodeMemoryReportFormatter.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\TestFailureTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\TestFilterTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\TestHarness_cTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\TestHarness_cTestCFile.c
+# End Source File
+# Begin Source File
+
+SOURCE=.\TestInstallerTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\TestMemoryAllocatorTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMemoryReportAllocator.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMemoryReporterPlugin.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMemoryReportFormatter.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMockActualFunctionCall.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMockCheatSheet.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMockExpectedFunctionCall.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMockExpectedFunctionsList.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMockFailure.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMockPlugin.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMockSupport.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestOrderedTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\TestOutputTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\TestRegistryTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\TestResultTest.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\UtestTest.cpp
 # End Source File
 # End Group
 # Begin Group "Header Files"
 
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\AllocationInCFile.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\AllocationInCppFile.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\AllTests.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMockFailure.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\CppUTestExt\TestMockSupport_cCFile.h
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 # End Group
 # End Target
 # End Project
