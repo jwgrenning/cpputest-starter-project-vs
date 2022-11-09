@@ -17,7 +17,7 @@ This describes how to integrate CppUTest based testing into your production code
 * Go to cpputest.org, and download the latest cpputest.  
 * Follow the instructions for building it.
 * Add an environment variable called CPPUTEST_HOME to your environment variables that points the home directory of CppUTest.
-* Open the CppUTest visual studio solution. (e.g., CppUTest_VS201x.sln)
+* Open the CppUTest visual studio solution. (e.g., cpputest-3.8\CppUTest_VS201x.sln)
 * Make sure to upgrade the current Visual Studio tools. (e.g., for Visual Studio 2019: right-click the solution, and then select "Retarget solution")
 * Build: "Menu Debug, Start Without Debugging" (assuming VS 2019)
 * You should see these test results in the console window:
@@ -28,7 +28,11 @@ This describes how to integrate CppUTest based testing into your production code
     ```
 
 ### Unzip and build the starter project
-* open the solution vs-test-build/TddC-StarterProject_VS2010.sln (or the solution best suited to your VS version)
+Clone the starter-kit like this:
+```
+git clone https://github.com/jwgrenning/cpputest-starter-project-vs.git
+```
+* open the solution cpputest-starter-project-vs/vs-test-build/TddC-StarterProject_VS2010.sln (or the solution best suited to your VS version)
 * Make sure to upgrade the current Visual Studio tools. (e.g., for Visual Studio 2019: right-click the solution, and then select "Retarget solution")
 * Build: "Menu Debug, Start Without Debugging" (assuming VS 2019)
 * You should see these test results in the console window:
